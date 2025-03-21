@@ -19,12 +19,12 @@
       text-align: center;
       text-shadow: 7px 4px 7px rgba(0,0,0,0.25);
       font-size: 28px;
-      margin-bottom: 10px;
+      margin-bottom: 80px;
+      margin-top: 50px;
     }
    
    .box {
     min-height: 200px;
-    margin-inline: 1rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -32,6 +32,7 @@
     font-size: 24px;
     border-radius: 4.5px;
     color: white;
+    margin-inline: 1rem;
    }
    
    .box-1 {
@@ -56,15 +57,29 @@
    }
    
    @media(min-width: 600px) {
-     .box-1 {
-       width: 500px;
-     }
+   
+   .container {
+     grid-template-columns: 1fr 1fr;
    }
+   
+   .box-1 {
+     grid-column-start: span 2;
+   }
+   
+   .box-3 {
+     grid-row-start: span 2;
+     margin-left: -1rem;
+   }
+   
+   .box-5 {
+     grid-column-start: span 2;
+   }
+  }
   </style>
 
 <body>
+    <p> Css Grid </p>
 <div class="container">
-  <p> Css Grid </p>
   <div class="box box-1"> 1 </div>
   <div class="box box-2"> 2 </div>
   <div class="box box-3"> 3 </div>
