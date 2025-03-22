@@ -1,18 +1,20 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title></title>
-  <!--<link rel="stylesheet" href="style.css" type="text/css" media="all" /> -->
+  <title> Learning HTML & CSS</title>
   <style>
- * {
+.* {
       box-sizing: border-box;
     }
     
     .container {
       display: grid;
       gap: 1rem;
+      margin-bottom: 50px;
+      margin-inline: 1rem;
     }
     
     p {
@@ -32,7 +34,8 @@
     font-size: 24px;
     border-radius: 4.5px;
     color: white;
-    margin-inline: 1rem;
+    
+    text-align: center;
    }
    
    .box-1 {
@@ -53,13 +56,12 @@
    
    .box-5 {
      background-color: #BE3690;
-     margin-bottom: 50px;
    }
    
    @media(min-width: 600px) {
    
    .container {
-     grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
    }
    
    .box-1 {
@@ -68,12 +70,18 @@
    
    .box-3 {
      grid-row-start: span 2;
-     margin-left: -1rem;
    }
-   
    .box-5 {
-     grid-column-start: span 2;
+    grid-column-start: span 2;
+    text-align: center;
    }
+  }
+  
+  @media(min-width: 1000px) {
+    
+  .container {
+   grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
   }
   </style>
 
